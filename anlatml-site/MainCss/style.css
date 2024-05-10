@@ -1,0 +1,337 @@
+:root{
+    --color1:#000000;
+    --color2:#3E3636;
+    --color3:#D72323;
+    --color4:#F5EDED;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color3);
+    border-radius: 15px;
+}
+html{
+    font-size: 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+img{
+    width: 100%;
+}
+
+
+/* HEADER */
+header{
+    background-color: var(--color4);
+   }
+   
+   
+   .header-container{
+    display: flex; 
+    width: 60%;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    background-attachment: fixed;
+   }
+   .header-container img{
+       width: 25%;
+   }
+   .header-btn{
+    display: flex;
+    gap: 20px;
+
+   }
+   .buttons{
+
+   padding: 1rem 1.5rem;
+   font-size: 1.5rem;
+   color: #fff;
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      background: var(--color3);
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+   }
+   .buttons:hover{
+    transform: scale(1.2);
+   }
+/* SECTİON */
+
+.section{
+background: url(img/header-bg.jpg) no-repeat 50% 50% /cover;
+height: 70vh;
+color: white;
+position: relative;
+}
+.section::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: var(--color1);
+    opacity: .7;
+    position: absolute;
+}
+.section-container{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.section-container h1{
+    font-size: 6rem;
+    font-weight: bold;
+
+}
+.section-container h3{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #D72323;
+}
+/* MAİN */
+
+#main-father{ /* id=ana */ 
+    display: flex;
+    padding: 40px 40px 0 40px;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.main-inclusive{ /* ana */
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   border: 1px solid black;
+   border-radius: 50px 50px 10px 10px;
+}
+.card-top{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   height: 400px;
+   background-color: var(--color4);
+   border-radius: 50px 50px 0 0;
+   justify-content: space-between;
+   padding-top: 40px;
+}
+.card-top h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+.card-bottom button{
+    border: 1px solid brown;
+    color: #F5EDED;
+    outline: #F5EDED;
+    font-weight: bold;
+ 
+}
+.card-top img:last-child{
+   width: 60%;
+}
+.card-bottom{
+display: flex;
+padding:20px 0;
+justify-content: center;
+}
+
+/* ADVERTS */
+.title{
+    margin-top: 35px;
+    
+}
+.title h1{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 500;
+   
+
+}
+.title-bottom{
+width: 13%;
+height: 3px;
+background-color: var(--color3);
+margin: 5px auto 0;
+margin-bottom: 25px;
+}
+.adverts-cards{
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+
+   margin-inline: auto;
+   gap: 10px;
+}
+
+.adverts-card{
+    position: relative;
+    overflow: hidden;
+}
+.card-text{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgba(62, 54, 54, 0.75);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    gap: 25px;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    top: 100%; /* eğer asıl div'e top 100% verirsen hovera 0 verirsen istediğin gibi çalışır. */
+}
+
+.card-text h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.card-text p{
+    font-size:2rem;
+}
+.card-text button{
+    width: 41%;
+    margin-inline: auto;
+    color: #fff;
+    font-size: 2rem;
+}
+.adverts-card:hover .card-text{
+    top: 0;
+}
+
+/* BLOGS */
+
+#blogs .title-bottom{
+    width: 10%;
+}
+.blog-container{
+    display: flex;
+    flex-direction: row;
+    width: 92%;
+    margin-inline: auto;
+}
+.blog-container div{
+    width: 100%;
+}
+.blog-container .blog-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--color4);
+    padding: 20px;
+    justify-content: center;
+}
+.blog-container .blog-text button{
+width: 25%;
+font-size: 2rem;
+}
+.blog-container .blog-text h1{
+    font-size:4rem;
+    font-weight: 700;
+}
+.blog-container .blog-text p{
+    font-size: 2rem;
+}
+.reverse {
+    flex-direction: row-reverse !important; /* .blog-container yanına bir class daha verdim oda reverse
+    SADECE 2. BLOGA REVERSE class'ını ver  */
+
+}
+
+/* SERVİCE */
+
+.services-container{
+    width: 90%;
+    background-color: var(--color4);
+    display: flex;
+justify-content: space-around;
+text-align: center;
+margin-inline: auto;
+padding: 20px 0;
+border-radius: 30px;
+}
+.service-text p:first-of-type{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #D72323;
+    margin-bottom: 10px;
+}
+.service-text p:last-of-type{
+    font-size: 2rem;
+    font-weight: bold;
+}
+#services .title-bottom{
+    width: 17%;
+}
+
+/* SİGN UP */
+
+#signUp .title-bottom{
+    width: 17%;
+}
+.signUp-text{
+    background-color: var(--color4);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.signUp-text p{
+    font-size: 3rem;
+    font-weight: 500;
+  text-align: center;
+  padding: 25px 0;
+}
+.input-button{
+    display: flex;
+}
+.input-button input{
+width: 300px;
+height: 4rem;
+border: 1px solid black;
+border-radius: 35px 0 0 35px;
+padding:  0 15px;
+font-size: 1.5rem;
+}
+.input-button button{
+    border: none;
+    border-radius: 0 35px 35px 0;
+}
+.input-button button:hover{
+    transform: scale(1);
+}
+
+/* FOOTER */
+.footer-1-img{
+    width: 40%;
+}
+.dimenson p{
+    font-size: 1.5rem;
+}
